@@ -3,7 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import BarChart from './components/BarChart';
+import CandleStickOld from './components/CandleStickOld';
 import CandleStick from './components/CandleStick';
+import {options, series} from './utils/info';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +16,8 @@ function App() {
      
       <h1>Welcome to candles</h1>
        <BarChart />
-       <CandleStick />
+       <CandleStickOld />
+       <CandleStick chartOptions={options} chartSeries={series} width={460}/>
     </>
   )
 }
