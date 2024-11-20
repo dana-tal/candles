@@ -16,7 +16,6 @@ function App() {
      
       <h1>Welcome to candles</h1>
        <BarChart />
-       <CandleStickOld />
        <CandleStick chartOptions={options} chartSeries={series} width={460}/>
     </>
   )
