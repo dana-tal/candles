@@ -1,4 +1,9 @@
-import dayjs from 'dayjs';
+
+/*
+ labels: {
+            rotate: -45
+          },
+*/
 
 export const  options = {
         chart: {
@@ -13,6 +18,11 @@ export const  options = {
         /* type: 'datetime', */
         type: 'datetime',
         labels: {
+          
+          show: true,
+          rotate: -45,
+          rotateAlways: true,
+          
           formatter: function(val) {
 
             const date = new Date(val);
@@ -29,15 +39,21 @@ export const  options = {
         }
       
       },
-
-      
-
-
       yaxis: {
         tooltip: {
           enabled: true
         }
-      }
+      },
+      plotOptions: {
+        candlestick: {
+          colors: {
+            upward: '#3C90EB',
+            downward: '#DF7D46'
+          }
+        }
+      },
+      
+      
 };
 
 export const series= [{
